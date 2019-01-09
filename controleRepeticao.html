@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>js</title>
+    </head>
+    <body>
+
+    
+        <script>
+            var idade = 16;
+            var situacao = (idade>=18) ? 'Maioridade' : 'Menor';
+            console.log(situacao);
+
+            var diaSemana = new Date().getDay();
+            switch(diaSemana){
+                case 0: 
+                    console.log('Domingo');
+                    break; 
+                case 1:
+                    console.log('segunda-feira');
+                    break;
+                case 2:
+                    console.log('terça-feira');
+                    break;
+                case 3:
+                    console.log('quarta-feira');
+                    break;
+                case 4:
+                    console.log('quinta-feira');
+                    break;
+                case 5:
+                    console.log('sexta-feira');
+                    break;
+                case 6:
+                    console.log('sabado');
+                    break;
+                default:
+                    console.log('algo inesperado aconteceu');
+                    break;
+            }
+
+            var linguagens = ['php', 'java', 'c++', 'asp', 'delphi'];
+            for(var i=0; i<linguagens.length; i++){
+                if(i==2)continue; // break (para)
+                console.log(linguagens[i]);
+            }
+        </script>
+    </body>
+</html>

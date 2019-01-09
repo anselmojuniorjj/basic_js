@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>js</title>
+    </head>
+    <body>
+
+        <div id="teste"></div>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p class="exemplo"></p>
+        <p class="exemplo"></p>
+        <p class="exemplo"></p>
+        <p class="classname"></p>
+
+        <img id="imagem1" src="imagem.jpg" alt="texto...">
+
+        <h1 onclick="this.innerHTML='Você clicou'">Clique aqui</h1>
+        <h1 onclick="funcao(this)">Clique aqui</h1>
+        <h1 onmouseover="funcao1(this)" onmouseout="funcao2(this)">Passe o mouse aqui</h1>
+
+        <script>
+           document.getElementById('teste').innerHTML = 'texto da div';
+           
+           var p = document.getElementsByTagName('p');
+           p[0].innerHTML = 'paragrafo 1';
+           p[1].innerHTML = 'paragrafo 2';
+           p[2].innerHTML = 'paragrafo 3';
+
+           var n = document.getElementsByClassName('classname');
+           n[0].innerHTML = 'get by clasName';
+
+           var s = document.querySelectorAll('p.exemplo');
+           s[0].innerHTML = 'class exemplo 1';
+           s[1].innerHTML = 'class exemplo 2';
+           s[2].innerHTML = 'class exemplo 2';
+
+           document.getElementById('imagem1').src = 'foto.jpg';
+           document.getElementById('imagem1').alt = 'foto alterada';
+
+           document.getElementById('teste').style.color = 'red';
+
+           function funcao(elemento){
+               elemento.innerHTML = 'Clicado';
+           }
+
+           function funcao1(elemento){
+               elemento.style.color = 'red';
+           }
+
+           function funcao2(elemento){
+               elemento.style.color = 'black';
+           }
+
+           /*
+            onclick / onload / onchange / onmouseover / onmouseout
+            onfocus / onmousedown / onmouseup
+           */
+        </script>
+    </body>
+</html>

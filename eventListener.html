@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>js</title>
+    </head>
+    <body>
+
+        <input id="btn" type="button" value="Clique">
+        <p id="msg2"></p>
+        <p id="msg"></p>
+        <script>
+            var x = document.getElementById('btn');
+            x.addEventListener('mouseover', function(){
+                document.getElementById('msg').innerHTML = 'mouse here';
+            });
+            x.addEventListener('mouseout', function(){
+                document.getElementById('msg').innerHTML = '';
+            });
+            x.addEventListener('click', function(){
+                document.getElementById('msg2').innerHTML = 'vc clicou no botão';
+            })
+        </script>
+    </body>
+</html>

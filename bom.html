@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>js</title>
+    </head>
+    <body>
+
+        <div id="msg"></div>
+        <div id="msg2"></div>
+        <div id="numero"></div>
+        <div id="msg3"></div>
+
+        <input type="button" value="Cancelar" onclick="clearTimeout(msg)">
+        <input type="button" value="Parar Contagem" onclick="clearInterval(msg2)">
+
+        <script>
+            window.localStorage.setItem('nome', 'João');
+            document.getElementById('msg').innerHTML = window.localStorage.getItem('nome');
+            window.sessionStorage.setItem('nome2', 'Maria');
+            document.getElementById('msg2').innerHTML = window.sessionStorage.getItem('nome2');
+
+            var n = document.getElementById('numero');
+            var i=0;
+            var msg2 = setInterval(function(){
+                i++
+                n.innerHTML = i;
+                
+            }, 1000)
+
+            var msg = setTimeout(function(){
+                alert('setTimeout');
+            }, 5000);
+
+            var cont = 0;
+            var intervalo = setInterval(function(){
+                if(document.hasFocus()){
+                    cont++;
+                    if(cont>=10){
+                        document.getElementById('msg3').innerHTML = 'Obrigado pela visita';
+                        clearInterval(intervalo);
+                    }
+                }
+            }, 1000);
+            
+            
+        </script>
+    </body>
+</html>

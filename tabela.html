@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>js</title>
+        <style>
+            .zebrada{background: silver;}
+        </style>
+    </head>
+    <body>
+
+        <table class="zebra">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Fone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Mario</th>
+                    <th>0xx00 00000-0000</th>
+                </tr>
+                <tr>
+                    <th>João</th>
+                    <th>0xx00 00000-0000</th>
+                </tr>
+                <tr>
+                    <th>Maria</th>
+                    <th>0xx00 00000-0000</th>
+                </tr>
+                <tr>
+                     <th>Priscila</th>
+                    <th>0xx00 00000-0000</th>
+                </tr>
+                <tr>
+                    <th>Leticia</th>
+                    <th>0xx00 00000-0000</th>
+                </tr>
+            </tbody>
+        </table>
+
+        <script>
+            window.onload=function(){
+                var zebrar = document.querySelectorAll('.zebra tbody tr');
+                for(var i=0; i<zebrar.length; i+=2){
+                    zebrar[i].className='zebrada';
+                }
+            }
+        </script>
+    </body>
+</html>

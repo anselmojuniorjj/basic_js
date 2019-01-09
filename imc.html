@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>js</title>
+        <style>
+            .zebrada{background: silver;}
+        </style>
+    </head>
+    <body>
+
+        <table class="imc">
+            <thead>
+                <tr>
+                    <th>Peso</th>
+                    <th>Altura</th>
+                    <th>IMC</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="peso">60</th>
+                    <th class="altura">1.70</th>
+                    <th class="resultado"></th>
+                </tr>
+                <tr>
+                    <th class="peso">75</th>
+                    <th class="altura">1.80</th>
+                    <th class="resultado"></th>
+                </tr>
+                <tr>
+                    <th class="peso">86</th>
+                    <th class="altura">1.75</th>
+                    <th class="resultado"></th>
+                </tr>
+                <tr>
+                    <th class="peso">64</th>
+                    <th class="altura">1.69</th>
+                    <th class="resultado"></th>
+                </tr>
+                <tr>
+                    <th class="peso">50</th>
+                    <th class="altura">1.55</th>
+                    <th class="resultado"></th>
+                </tr>
+            </tbody>
+        </table>
+
+        <script>
+
+            window.onload=function(){
+                var imc = document.querySelectorAll('.imc tbody tr');
+                for(var i=0; i<imc.length; i++){
+                    var n = document.getElementsByClassName('resultado');
+                    var p = document.getElementsByClassName('peso')[i].innerHTML;
+                    var a = document.getElementsByClassName('altura')[i].innerHTML;
+                    var result = p / (a*a);
+                    n[i].innerHTML = result.toFixed(2);
+                    console.log(p);
+                    console.log(a);
+                }
+
+                var zebrar = document.querySelectorAll('.imc tbody tr');
+                for(var i=0; i<zebrar.length; i+=2){
+                    zebrar[i].className='zebrada';
+                }
+            }
+            
+            
+        </script>
+    </body>
+</html>
